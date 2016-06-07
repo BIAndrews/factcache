@@ -51,7 +51,7 @@ class { 'factcache':
 
 ## Reference
 
-List of classes, types, providers, facts, etc contained in this module.
+List of classes, types, providers, facts, scripts, etc contained in this module.
 * `factcache::json` - Boolean. To cache in JSON or not. Default: _true_.
 * `factcache::yaml` - Boolean. To cache in YAML or not. Default: _true_.
 * `factcache::file_json` - JSON file name. Default: _facts.json_.
@@ -60,6 +60,7 @@ List of classes, types, providers, facts, etc contained in this module.
 * `factcache::params::mode` - File mode, default: 0664.
 * `factcache::params::owner` - File owner, default: _root_.
 * `factcache::params::group` - File group , default: _root_.
+* `qa.sh` - Shell script for lint, syntax, and rspec QA testing.
 
 ## Limitations
 
