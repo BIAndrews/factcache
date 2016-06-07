@@ -12,7 +12,9 @@ group :test do
   gem 'simplecov', '>= 0.11.0'
   gem 'simplecov-console'
   gem "spawn"
-
+  if RUBY_VERSION >= "2.0"
+    gem 'syck'
+  end
   gem "puppet-lint-absolute_classname-check"
   gem "puppet-lint-leading_zero-check"
   gem "puppet-lint-trailing_comma-check"
