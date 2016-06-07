@@ -8,18 +8,21 @@ describe 'factcache' do
           facts
         end
 
+        # this should fail
         context 'with json => string' do
           let(:params) { {:json => 'string test'} }
 
           it { is_expected.to raise_error(Puppet::Error, /is not a boolean.  It looks to be a String at/) }
         end
 
+        # this should fail
         context 'with yaml => string' do
           let(:params) { {:yaml => 'string test'} }
 
           it { is_expected.to raise_error(Puppet::Error, /is not a boolean.  It looks to be a String at/) }
         end
 
+        # create both JSON and YAML files and cron jobs
         context "factcache class without any parameters" do
           it { is_expected.to compile.with_all_deps }
 
@@ -39,6 +42,7 @@ describe 'factcache' do
           it { is_expected.to contain_exec('factcache update YAML now') }
         end
 
+        # disable YAML file and cron job
         context 'with yaml => false' do
           let(:params) { {:yaml => false} }
           it { is_expected.to compile.with_all_deps }
@@ -57,6 +61,7 @@ describe 'factcache' do
           it { is_expected.to contain_exec('factcache update JSON now') }
         end
 
+        # disable JSON file and cron job
         context 'with json => false' do
           let(:params) { {:json => false} }
           it { is_expected.to compile.with_all_deps }
