@@ -2,11 +2,22 @@
   "name": "bryana-factcache",
   "version": "0.1.0",
   "author": "Bryan Andrews",
-  "summary": "Factcache caches facter facts locally for 3rd party offline integration",
+  "summary": "Factcache caches facter facts locally for 3rd party offline integration in both YAML and JSON.",
   "license": "GPLv3",
   "source": "https://github.com/BIAndrews/factcache",
   "project_page": "https://github.com/BIAndrews/factcache",
   "issues_url": "https://github.com/BIAndrews/factcache/issues",
+  "tags": ["cache", "facts", "facter cache", "yaml", "json", "facter"],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": ">=3.2.0 < 2016.0.0"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0"
+    }
+  ],
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
@@ -14,6 +25,49 @@
     }
   ],
   "operatingsystem_support": [
+    {
+      "operatingsystem":"Amazon",
+      "operatingsystemrelease": [
+        "2014.03",
+        "2014.09",
+        "2015.03",
+        "2015.09",
+        "2016.03"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04",
+        "15.10",
+        "16.04"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "10 SP4",
+        "11 SP1",
+        "12"
+      ]
+    },
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
@@ -23,6 +77,14 @@
     },
     {
       "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
       "operatingsystemrelease": [
         "5",
         "6",
