@@ -32,12 +32,7 @@ describe 'factcache' do
           it { is_expected.to contain_class('factcache') }
           it { is_expected.to contain_cron('factcache JSON file') }
           it { is_expected.to contain_cron('factcache YAML file') }
-          it { is_expected.to contain_file('/var/cache/facts').with({
-            'ensure' => 'directory',
-            'owner'  => 'root',
-            'group'  => 'root',
-            'mode'   => '0664',
-          }) }
+          it { is_expected.to contain_file('/var/cache/facts').with({'ensure' => 'directory','owner' => 'root','group' => 'root','mode' => '0664'}) }
           it { is_expected.to contain_exec('factcache update JSON now') }
           it { is_expected.to contain_exec('factcache update YAML now') }
         end
@@ -52,12 +47,7 @@ describe 'factcache' do
 
           it { is_expected.to contain_class('factcache') }
           it { is_expected.to contain_cron('factcache JSON file') }
-          it { is_expected.to contain_file('/var/cache/facts').with({
-            'ensure' => 'directory',
-            'owner'  => 'root',
-            'group'  => 'root',
-            'mode'   => '0664',
-          }) }
+          it { is_expected.to contain_file('/var/cache/facts').with({'ensure' => 'directory','owner' => 'root','group' => 'root','mode' => '0664'}) }
           it { is_expected.to contain_exec('factcache update JSON now') }
         end
 
@@ -71,17 +61,10 @@ describe 'factcache' do
 
           it { is_expected.to contain_class('factcache') }
           it { is_expected.to contain_cron('factcache YAML file') }
-          it { is_expected.to contain_file('/var/cache/facts').with({
-            'ensure' => 'directory',
-            'owner'  => 'root',
-            'group'  => 'root',
-            'mode'   => '0664',
-          }) }
+          it { is_expected.to contain_file('/var/cache/facts').with({'ensure' => 'directory','owner' => 'root','group' => 'root','mode' => '0664'}) }
           it { is_expected.to contain_exec('factcache update YAML now') }
         end
-
       end
     end
   end
-
 end

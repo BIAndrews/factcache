@@ -12,14 +12,11 @@ describe 'factcache class' do
       apply_manifest(pp, :catch_failures => true)
       apply_manifest(pp, :catch_changes  => true)
     end
-
     describe cron("factcache yaml file") do
       it { is_expected.to be_installed }
     end
-
     describe file('/var/cache/facts') do
       it { is_expected.to be_installed }
     end
-
   end
 end

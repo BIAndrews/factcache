@@ -15,6 +15,6 @@ echo "Running PF metadata_lint test..."
 bundle exec rake metadata_lint 2>/dev/null
 test $? -ne 0 && exit $?;
 
-echo "Running rspec unit tests..."
-bundle exec rake spec 2>/dev/null
+echo "Running rSpec tests..."
+bundle exec rake test 2>/dev/null
 test $? -ne 0 && exit $?;
