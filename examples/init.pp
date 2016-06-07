@@ -2,11 +2,11 @@
 #class { ::factcache: }
 
 # YAML  only
-#class { 'factcache':
+#class { '::factcache':
 #  json => false,
 #}
 
 # JSON only
-class { 'factcache':
+class { '::factcache':
   yaml => false,
 }
