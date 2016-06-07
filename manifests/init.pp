@@ -23,11 +23,11 @@
 #
 class factcache (
 
-  $json        = true,        
-  $yaml        = true,        
+  $json        = true,
+  $yaml        = true,
   $file_json   = 'facts.json',
   $file_yaml   = 'facts.yaml',
-  $minute      = [00,59],
+  $minute      = ['00','59'],
 
 ) inherits ::factcache::params {
 
@@ -52,7 +52,7 @@ class factcache (
   #
   if $json {
 
-    cron { "$name JSON file":
+    cron { "${name} JSON file":
       ensure  => 'present',
       command => $update_json,
       minute  => $minute,
@@ -62,7 +62,7 @@ class factcache (
     #
     # if this is a fresh install create the cache file right away
     #
-    exec { "$name update JSON now":
+    exec { "${name} update JSON now":
       command     => $update_json,
       logoutput   => on_failure,
       refreshonly => true,
@@ -76,7 +76,7 @@ class factcache (
   #
   if $yaml {
 
-    cron { "$name YAML file":
+    cron { "${name} YAML file":
       ensure  => 'present',
       command => $update_yaml,
       minute  => $minute,
@@ -86,7 +86,7 @@ class factcache (
     #
     # if this is a fresh install create the cache file right away
     #
-    exec { "$name update YAML now":
+    exec { "${name} update YAML now":
       command     => $update_yaml,
       logoutput   => on_failure,
       refreshonly => true,

@@ -1,9 +1,9 @@
 {
   "name": "bryana-factcache",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Bryan Andrews",
   "summary": "Factcache caches facter facts locally for 3rd party offline integration in both YAML and JSON.",
-  "license": "GPLv3",
+  "license": "Apache-2.0",
   "source": "https://github.com/BIAndrews/factcache",
   "project_page": "https://github.com/BIAndrews/factcache",
   "issues_url": "https://github.com/BIAndrews/factcache/issues",
@@ -16,12 +16,6 @@
     {
       "name": "puppet",
       "version_requirement": ">= 3.0.0"
-    }
-  ],
-  "dependencies": [
-    {
-      "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 1.0.0"
     }
   ],
   "operatingsystem_support": [
