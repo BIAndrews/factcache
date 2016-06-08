@@ -3,6 +3,9 @@
 #  Script to quickly run all syntax, lint, and rspec tests
 #
 
+echo -n "Ruby Version: "; ruby --version
+echo -n "Puppet Version: "; puppet --version
+
 echo "Running lint test..."
 bundle exec rake lint 2>/dev/null
 test $? -ne 0 && exit $?;
@@ -18,3 +21,8 @@ test $? -ne 0 && exit $?;
 echo "Running rSpec tests..."
 bundle exec rake test 2>/dev/null
 test $? -ne 0 && exit $?;
+
+echo
+echo "--------------------------------------------------------------------------"
+echo -n "Ruby Version: "; ruby --version
+echo -n "Puppet Version: "; puppet --version
