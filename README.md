@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/BIAndrews/factcache.svg?branch=master)](https://travis-ci.org/BIAndrews/factcache)
+
 #### Table of Contents
 
 1. [Overview](#overview)
